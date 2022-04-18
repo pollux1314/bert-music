@@ -1,0 +1,5 @@
+MYSQL_HOST: sh-cynosdbmysql-grp-cuaaj0mu.sql.tencentcdb.com
+MYSQL_PORT: 25905
+DATABASE_NAME: music
+MYSQL_USER_NAME: root
+MYSQL_PASSWORD: FJb4t8Fc
