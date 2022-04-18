@@ -1,0 +1,24 @@
+CREATE TABLE TS_USER
+(
+    RID             VARCHAR(32) NOT NULL COMMENT '数据主键',
+    USERNAME        VARCHAR(255) COMMENT '用户名',
+    NICKNAME        VARCHAR(255) COMMENT '昵称',
+    PASSWORD        VARCHAR(255) COMMENT '加密后的密码',
+    GENDER          VARCHAR(255) COMMENT '性别',
+    LOCKED          tinyint(1) COMMENT '是否锁定',
+    ENABLED         tinyint(1) COMMENT '是否可用',
+    LAST_LOGIN_IP   VARCHAR(255) COMMENT '最后登录ip',
+    LAST_LOGIN_TIME DATETIME(6) COMMENT '最后登录时间',
+    CREATED_BY      VARCHAR(32) COMMENT '创建人',
+    CREATED_TIME    DATETIME(6) COMMENT '创建时间',
+    UPDATED_BY      VARCHAR(32) COMMENT '更新人',
+    UPDATED_TIME    DATETIME(6) COMMENT '更新时间',
+    IF_DELETE       tinyint(1) COMMENT '是否删除',
+    DELETED_BY      VARCHAR(32) COMMENT '删除人',
+    DELETED_TIME    DATETIME(6) COMMENT '删除时间',
+    PRIMARY KEY (RID)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_bin COMMENT '用户表';
+
+CREATE UNIQUE INDEX idx_user_name ON TS_USER (USERNAME);

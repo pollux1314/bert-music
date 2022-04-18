@@ -22,4 +22,4 @@ spring:
     properties:
       format_sql: true
   flyway:
-    enabled: true
+    enabled: false
